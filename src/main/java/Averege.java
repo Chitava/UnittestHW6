@@ -1,36 +1,29 @@
 public class Averege {
+    private double averege1;
+    private double averege2;
 
-    private Massive arr1;
-    private Massive arr2;
-
-
-    public Averege(int lenMass) {
-        this.arr1 = new Massive(lenMass);
-        this.arr2 = new Massive(lenMass);
+    public Averege(Massive mass1, Massive mass2) {
+        this.averege1 = mass1.getAverege();
+        this.averege2 = mass1.getAverege();
     }
 
-    public void compareAverage(){
-        if (arr1.getAverege() == arr2.getAverege()){
-            System.out.printf("Среднее арифметическое первого массива %s равно среднему арифметическому второго " +
-                    "массива %s", Math.round(arr1.getAverege()* 100.0)/100.0, Math.round(arr2.getAverege()*
-                    100.0)/100.0);
-        } else if (arr1.getAverege() > arr2.getAverege()) {
-            System.out.printf("Среднее арифметическое первого массива %s больше среднего арифметического второго " +
-                    "массива %s", Math.round(arr1.getAverege()* 100.0) / 100.0, Math.round(arr2.getAverege()*
-                    100.0)/100.0);
-        }else if (arr1.getAverege() < arr2.getAverege()) {
-            System.out.printf("Среднее арифметическое первого массива %s меньше среднего арифметического второго " +
-                    "массива %s", Math.round(arr1.getAverege()* 100.0) / 100.0, Math.round(arr2.getAverege()*
-                    100.0)/100.0);
-            }
+    public String compareAverage() {
+        if (averege1 == averege2) {
+            return String.format("Среднее арифметическое первого массива %s равно среднему арифметическому второго " +
+                    "массива %s", Math.round(averege1 * 100.0) / 100.0, Math.round(averege2 *
+                    100.0) / 100.0);
+        } else if (averege1 > averege2) {
+            return String.format("Среднее арифметическое первого массива %s больше среднего арифметического второго " +
+                    "массива %s", Math.round(averege1 * 100.0) / 100.0, Math.round(averege2 *
+                    100.0) / 100.0);
+        } else if (averege1 < averege2) {
+            return String.format("Среднее арифметическое первого массива %s меньше среднего арифметического второго " +
+                    "массива %s", Math.round(averege1 * 100.0) / 100.0, Math.round(averege2 *
+                    100.0) / 100.0);
         }
-
-
-    public Massive getArr1() {
-        return arr1;
-    }
-
-    public Massive getArr2() {
-        return arr2;
+        return null;
     }
 }
+
+
+

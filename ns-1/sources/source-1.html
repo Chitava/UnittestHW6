@@ -1,0 +1,132 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Averege</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">&lt;empty package name&gt;</a>
+</div>
+
+<h1>Coverage Summary for Class: Averege (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Averege</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    46,2%
+  </span>
+  <span class="absValue">
+    (6/13)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;public class Averege {
+&nbsp;    private double averege1;
+&nbsp;    private double averege2;
+&nbsp;
+<b class="fc">&nbsp;    public Averege(Massive mass1, Massive mass2) {</b>
+<b class="fc">&nbsp;        this.averege1 = mass1.getAverege();</b>
+<b class="fc">&nbsp;        this.averege2 = mass1.getAverege();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public String compareAverage() {
+<b class="fc">&nbsp;        if (averege1 == averege2) {</b>
+<b class="fc">&nbsp;            return String.format(&quot;Среднее арифметическое первого массива %s равно среднему арифметическому второго &quot; +</b>
+<b class="fc">&nbsp;                    &quot;массива %s&quot;, Math.round(averege1 * 100.0) / 100.0, Math.round(averege2 *</b>
+&nbsp;                    100.0) / 100.0);
+<b class="nc">&nbsp;        } else if (averege1 &gt; averege2) {</b>
+<b class="nc">&nbsp;            return String.format(&quot;Среднее арифметическое первого массива %s больше среднего арифметического второго &quot; +</b>
+<b class="nc">&nbsp;                    &quot;массива %s&quot;, Math.round(averege1 * 100.0) / 100.0, Math.round(averege2 *</b>
+&nbsp;                    100.0) / 100.0);
+<b class="nc">&nbsp;        } else if (averege1 &lt; averege2) {</b>
+<b class="nc">&nbsp;            return String.format(&quot;Среднее арифметическое первого массива %s меньше среднего арифметического второго &quot; +</b>
+<b class="nc">&nbsp;                    &quot;массива %s&quot;, Math.round(averege1 * 100.0) / 100.0, Math.round(averege2 *</b>
+&nbsp;                    100.0) / 100.0);
+&nbsp;        }
+<b class="nc">&nbsp;        return null;</b>
+&nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;
+&nbsp;
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-10-31 20:07</div>
+</div>
+</body>
+</html>

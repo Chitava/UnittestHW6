@@ -1,0 +1,146 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Massive</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">&lt;empty package name&gt;</a>
+</div>
+
+<h1>Coverage Summary for Class: Massive (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Massive</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    83,3%
+  </span>
+  <span class="absValue">
+    (5/6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    72,2%
+  </span>
+  <span class="absValue">
+    (13/18)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;import java.util.ArrayList;
+&nbsp;import java.util.Random;
+&nbsp;
+&nbsp;public class Massive {
+&nbsp;    private double averege;
+&nbsp;    private ArrayList&lt;Integer&gt; array;
+&nbsp;
+<b class="fc">&nbsp;    public Massive(int len) {</b>
+<b class="fc">&nbsp;        ArrayList arr = new ArrayList&lt;&gt;();</b>
+<b class="fc">&nbsp;        for (int i = 0; i &lt; len; i++) {</b>
+<b class="fc">&nbsp;            Random rnd = new Random();</b>
+<b class="fc">&nbsp;            arr.add(rnd.nextInt(10));</b>
+&nbsp;        }
+<b class="fc">&nbsp;        this.array = arr;</b>
+&nbsp;    }
+&nbsp;    public double getAverege() {
+<b class="fc">&nbsp;        for (int i = 0; i &lt; array.size()-1; i++) {</b>
+<b class="fc">&nbsp;            averege = averege + array.get(i);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        averege = averege/array.size();</b>
+<b class="fc">&nbsp;        return averege;</b>
+&nbsp;    }
+&nbsp;    public void printArray(){
+<b class="nc">&nbsp;        System.out.print(&quot;[&quot;);</b>
+<b class="nc">&nbsp;        for (int i = 0; i &lt; array.size()-2; i++) {</b>
+<b class="nc">&nbsp;            System.out.print(array.get(i) + &quot;, &quot;);</b>
+&nbsp;        }
+<b class="nc">&nbsp;        System.out.print(array.get(array.size()-1));</b>
+<b class="nc">&nbsp;        System.out.print(&quot;]&quot;);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public ArrayList&lt;Integer&gt; getArray() {
+<b class="fc">&nbsp;        return array;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public int getArrayLenth() {
+<b class="fc">&nbsp;        return array.size();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setArray(ArrayList&lt;Integer&gt; array) {
+<b class="fc">&nbsp;        this.array = array;</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-10-31 20:07</div>
+</div>
+</body>
+</html>
